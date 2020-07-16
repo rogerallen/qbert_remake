@@ -2,7 +2,15 @@
 
 void keyEvent(Player* player, bool& got_quit_event, SDL_Event& event, Sound** sounds);
 
-Game::Game() {  return; }
+Game::Game() {  
+    sprites = nullptr;
+    snake_timer_start = -1;
+    screen_width = -1;
+    screen_height = -1;
+    renderer = nullptr;
+    board = nullptr;
+    ball_timer_start = -1;
+}
 
 Game::Game(SDL_Renderer* in_r, int s_w, int s_h) {
     renderer = in_r;

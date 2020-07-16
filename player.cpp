@@ -10,6 +10,9 @@ Player::Player(Board* in_board, SpriteSheet* in_sprites) {
     col = 0;
     board = in_board;
     sprites = in_sprites;
+    platforms = nullptr;
+    num_platforms = -1;
+    enemies = nullptr;
 }
 
 void Player::set_coll_sound(Sound* in_s) {
